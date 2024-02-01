@@ -7,7 +7,7 @@ class PageProvider extends ChangeNotifier {
 
   PageController scrollController = new PageController();
 
-  List<String> _pages = ['home','about','pricing','contact','location'];
+  List<String> _pages = ['home','UIUX','iOSAndroid','mobileweb','contact'];
   int _currentIndex = 0;
 
 
@@ -18,7 +18,6 @@ class PageProvider extends ChangeNotifier {
 
     this.scrollController.addListener(() {
       final index = (this.scrollController.page ?? 0).round();
-      
       if( index != _currentIndex ) {
         html.window.history.pushState(null, 'none', '#/${ _pages[index] }');
         _currentIndex = index;
@@ -36,7 +35,6 @@ class PageProvider extends ChangeNotifier {
 
 
   goTo( int index ) {
-
     // final routeName = _pages[index];
     html.window.history.pushState(null, 'none', '#/${ _pages[index] }');
 

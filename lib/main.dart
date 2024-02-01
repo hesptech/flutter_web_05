@@ -18,13 +18,12 @@ class AppState extends StatelessWidget {
   }
 }
 
-
-
  
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
+
 
 class _MyAppState extends State<MyApp> {
 
@@ -40,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Landing Page',
-      initialRoute: '/about',
+      initialRoute: '/contact',
       onGenerateRoute: Flurorouter.router.generator,
     );
   }

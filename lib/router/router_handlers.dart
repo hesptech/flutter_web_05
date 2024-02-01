@@ -14,7 +14,7 @@ final homeHandler = Handler(
       pageProvider.createScrollController(page);
 
       return HomePage();
-    }
+    } 
   }
 );
 

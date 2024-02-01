@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:vertical_landing_page/providers/page_provider.dart';
-
 import 'package:vertical_landing_page/ui/shared/custom_app_menu.dart';
-
-import 'package:vertical_landing_page/ui/views/about_view.dart';
-import 'package:vertical_landing_page/ui/views/contact_view.dart';
-import 'package:vertical_landing_page/ui/views/location_view.dart';
+import 'package:vertical_landing_page/ui/shared/navbar.dart';
 import 'package:vertical_landing_page/ui/views/home_view.dart';
-import 'package:vertical_landing_page/ui/views/pricing_view.dart';
+import 'package:vertical_landing_page/ui/views/ui_ux_view.dart';
+import 'package:vertical_landing_page/ui/views/os_view.dart';
+import 'package:vertical_landing_page/ui/views/mw_view.dart';
+import 'package:vertical_landing_page/ui/views/contact_view.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -23,11 +22,13 @@ class HomePage extends StatelessWidget {
 
             _HomeBody(),
 
-            Positioned(
+            /* Positioned(
               right: 20,
               top: 20,
               child: CustomAppMenu()
-            ),
+            ), */
+
+            Navbar()
 
           ],
         ),
@@ -61,10 +62,10 @@ class _HomeBody extends StatelessWidget {
       scrollDirection: Axis.vertical,
       children: [
         HomeView(),
-        AboutView(),
-        PricingView(),
+        UiUxView(),
+        OsView(),
+        MwView(),
         ContactView(),
-        LocationView(),
       ],
     );
   }
