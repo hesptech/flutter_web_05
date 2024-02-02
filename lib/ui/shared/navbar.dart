@@ -57,7 +57,7 @@ class Navbar extends StatelessWidget {
                 const SizedBox( width: 5 ),
 
                 MenuItem(
-                  text: 'UI/UX',
+                  text: 'UI UX',
                   icon: Icons.view_quilt,
                   onPressed: () => pageProvider.goTo(1),
                   //isActive: sideMenuProvider.currentPage == Flurorouter.uiuxRoute,
@@ -66,7 +66,7 @@ class Navbar extends StatelessWidget {
                 const SizedBox( width: 5 ),
 
                 MenuItemFontawesome(
-                  text: 'iOS/Android',
+                  text: 'iOS Android',
                   icon: FontAwesomeIcons.appStoreIos,
                   icon2: FontAwesomeIcons.android,
                   onPressed: () => pageProvider.goTo(2),
@@ -76,7 +76,7 @@ class Navbar extends StatelessWidget {
                 const SizedBox( width: 5 ),
 
                 MenuItem( 
-                    text: 'mobile/web', 
+                    text: 'mobile web', 
                     icon: Icons.devices,
                     icon2: Icons.desktop_windows_outlined, 
                     onPressed: () => pageProvider.goTo(3),
@@ -96,12 +96,12 @@ class Navbar extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20.0,),
-          const Divider(
+          /* const Divider(
             height: 0,
             color: Colors.white,
             indent: 50.0,
             endIndent: 50.0,
-          ),
+          ), */
         ],
       ),
     );
@@ -110,7 +110,7 @@ class Navbar extends StatelessWidget {
 
   BoxDecoration buildBoxDecoration() => const BoxDecoration(
     //color: Colors.white,
-    color: Color( 0xff1A2834 ),
+    //color: Color( 0xff1A2834 ),
     /* boxShadow: [
       BoxShadow(
         color: Colors.black12,

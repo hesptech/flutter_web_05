@@ -9,7 +9,7 @@ class MwView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.pinkAccent,
+      color: Color(0xFF8d99ae),
       child: Center(
         child: FittedBox(
           fit: BoxFit.contain,

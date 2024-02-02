@@ -14,21 +14,34 @@ import 'package:vertical_landing_page/ui/views/contact_view.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Container(
         decoration: buildBoxDecoration(),
         child: Stack(
           children: [
 
-            _HomeBody(),
+              _HomeBody(),
 
+            if ( size.width <= 900 )
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //SizedBox(height: 100,),
+                CustomAppMenu(),
+              ],
+            ),
             /* Positioned(
               right: 20,
               top: 20,
               child: CustomAppMenu()
             ), */
 
-            Navbar()
+            if ( size.width > 900 )
+              Navbar()
 
           ],
         ),

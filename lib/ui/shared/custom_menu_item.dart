@@ -38,11 +38,23 @@ class _CustomMenuItemState extends State<CustomMenuItem> {
             duration: Duration( milliseconds: 300 ),
             width: 150,
             height: 50,
-            color: isHover ? Colors.pinkAccent : Colors.transparent,
+            color: isHover ? const Color(0xFF778da9) : Colors.transparent,
             child: Center(
-              child: Text(
-                widget.text,
-                style: GoogleFonts.roboto( fontSize: 20, color: Colors.white )
+              child: Stack(
+                children: [
+                  Positioned(
+                    right: 1,
+                    top: 1,                    
+                    child: Text(
+                      widget.text,
+                      style: GoogleFonts.montserratAlternates( fontSize: 20, color: Colors.black )
+                    ),
+                  ),
+                  Text(
+                    widget.text,
+                    style: GoogleFonts.montserratAlternates( fontSize: 20, color: Colors.white )
+                  ),
+                ],
               ),
             ),
           ),

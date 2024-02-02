@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'package:vertical_landing_page/providers/page_provider.dart';
 import 'package:vertical_landing_page/ui/shared/custom_menu_item.dart';
 
@@ -44,10 +44,11 @@ class _CustomAppMenuState extends State<CustomAppMenu> with SingleTickerProvider
 
         },
         child: Container(
+          margin: EdgeInsets.only(top: 30),
           padding: EdgeInsets.symmetric( horizontal: 10 ),
           width: 150,
           height: isOpen ? 308: 50,
-          color: Colors.black,
+          //color: Colors.black,
           child: Column(
             children: [
               _MenuTitle(isOpen: isOpen, controller: controller),
@@ -87,19 +88,36 @@ class _MenuTitle extends StatelessWidget {
     return Container(
       width: 150,
       height: 50,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular( 4),
+        ),
+        //color: Colors.green,
+      ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AnimatedContainer(
-            duration: Duration( milliseconds: 200 ),
-            curve: Curves.easeInOut,
-            width: isOpen ? 45 : 0,
-          ),
-          Text('Menú', style: GoogleFonts.roboto( color: Colors.white, fontSize: 18 )),
-          Spacer(),
-          AnimatedIcon(
-            icon: AnimatedIcons.menu_close,
-            progress: controller, 
-            color: Colors.white,
+          Stack(
+            children: [
+              Positioned(
+                right: 1,
+                top: 1,
+                child: AnimatedIcon(
+                  icon: AnimatedIcons.menu_close,
+                  progress: controller, 
+                  color: Colors.black,
+                  size: 36,
+                ),
+              ),
+
+              AnimatedIcon(
+                icon: AnimatedIcons.menu_close,
+                progress: controller, 
+                color: Colors.white,
+                size: 36,
+              )
+
+            ],            
           )
         ],
       ),

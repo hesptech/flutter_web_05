@@ -42,7 +42,7 @@ class _MenuItemState extends State<MenuItem> {
             child: MouseRegion(
               onEnter: ( _ ) => setState( () => isHovered = true ),
               onExit: ( _ ) => setState( () => isHovered = false ),
-              child: Row(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
 
@@ -57,10 +57,17 @@ class _MenuItemState extends State<MenuItem> {
                     ],
                   ),
 
-                  const SizedBox( width: 7 ),
+                  const SizedBox( height: 7 ),
                   Text(
                     widget.text,
                     style: GoogleFonts.montserratAlternates(
+                      shadows: <Shadow>[
+                        Shadow(
+                          offset: Offset(1.0, 1.0),
+                          //blurRadius: 1.0,
+                          //color: Color.fromARGB(100, 0, 0, 0),
+                        ),
+                      ],
                       fontSize: 16,
                       fontWeight: widget.isActive ? FontWeight.bold : FontWeight.w600 ,
                       color: isHovered 

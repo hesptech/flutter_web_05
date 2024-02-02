@@ -6,7 +6,7 @@ class ContactView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple,
+      color: Color(0xFFedf2f4),
       child: Center(
         child: FittedBox(
           fit: BoxFit.contain,

@@ -9,7 +9,7 @@ class OsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.pinkAccent,
+      color: Color(0xFF415a77),
       child: Center(
         child: FittedBox(
           fit: BoxFit.contain,
