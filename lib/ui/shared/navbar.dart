@@ -4,9 +4,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:vertical_landing_page/providers/page_provider.dart';
 
+import 'package:vertical_landing_page/providers/page_provider.dart';
 import 'package:vertical_landing_page/providers/sidemenu_provider.dart';
+import 'package:vertical_landing_page/router/router.dart';
 import 'package:vertical_landing_page/ui/shared/widgets/menu_item.dart';
 import 'package:vertical_landing_page/ui/shared/widgets/menu_item_fontawesome.dart';
 
@@ -18,7 +19,7 @@ class Navbar extends StatelessWidget {
 
     final size = MediaQuery.of(context).size;
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
-    //final sideMenuProvider = Provider.of<SideMenuProvider>(context);
+    final sideMenuProvider = Provider.of<SideMenuProvider>(context);
 
     return Container(
       alignment: Alignment.bottomCenter,
@@ -51,7 +52,7 @@ class Navbar extends StatelessWidget {
                   text: 'home',
                   icon: Icons.home,
                   onPressed: () => pageProvider.goTo(0),
-                  //isActive: sideMenuProvider.currentPage == Flurorouter.homeRoute,
+                  isActive: sideMenuProvider.currentPage == Flurorouter.homeRoute,
                 ),
 
                 const SizedBox( width: 5 ),
@@ -60,7 +61,7 @@ class Navbar extends StatelessWidget {
                   text: 'UI UX',
                   icon: Icons.view_quilt,
                   onPressed: () => pageProvider.goTo(1),
-                  //isActive: sideMenuProvider.currentPage == Flurorouter.uiuxRoute,
+                  isActive: sideMenuProvider.currentPage == Flurorouter.uiuxRoute,
                 ),
 
                 const SizedBox( width: 5 ),
@@ -70,7 +71,7 @@ class Navbar extends StatelessWidget {
                   icon: FontAwesomeIcons.appStoreIos,
                   icon2: FontAwesomeIcons.android,
                   onPressed: () => pageProvider.goTo(2),
-                  //isActive: sideMenuProvider.currentPage == Flurorouter.osRoute,
+                  isActive: sideMenuProvider.currentPage == Flurorouter.osRoute,
                 ),
 
                 const SizedBox( width: 5 ),
@@ -80,7 +81,7 @@ class Navbar extends StatelessWidget {
                     icon: Icons.devices,
                     icon2: Icons.desktop_windows_outlined, 
                     onPressed: () => pageProvider.goTo(3),
-                    //isActive: sideMenuProvider.currentPage == Flurorouter.mwRoute,
+                    isActive: sideMenuProvider.currentPage == Flurorouter.mwRoute,
                   ),
 
                 const SizedBox( width: 5 ),
@@ -89,7 +90,7 @@ class Navbar extends StatelessWidget {
                     text: 'contacts', 
                     icon: Icons.list_alt_outlined, 
                     onPressed: () => pageProvider.goTo(4),
-                    //isActive: sideMenuProvider.currentPage == Flurorouter.contactRoute,
+                    isActive: sideMenuProvider.currentPage == Flurorouter.contactRoute,
                   ),
               ],
 

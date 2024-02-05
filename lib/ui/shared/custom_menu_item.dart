@@ -40,21 +40,19 @@ class _CustomMenuItemState extends State<CustomMenuItem> {
             height: 50,
             color: isHover ? const Color(0xFF778da9) : Colors.transparent,
             child: Center(
-              child: Stack(
-                children: [
-                  Positioned(
-                    right: 1,
-                    top: 1,                    
-                    child: Text(
-                      widget.text,
-                      style: GoogleFonts.montserratAlternates( fontSize: 20, color: Colors.black )
+              child: Text(
+                widget.text,
+                style: GoogleFonts.montserratAlternates( 
+                  shadows: <Shadow>[
+                    Shadow(
+                      offset: Offset(1.5, 1.5),
+                      blurRadius: 1.0,
+                      //color: Color.fromARGB(100, 0, 0, 0),
                     ),
-                  ),
-                  Text(
-                    widget.text,
-                    style: GoogleFonts.montserratAlternates( fontSize: 20, color: Colors.white )
-                  ),
-                ],
+                  ],
+                  fontSize: 20, 
+                  color: Colors.white 
+                )
               ),
             ),
           ),

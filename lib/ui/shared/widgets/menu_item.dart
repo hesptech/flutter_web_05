@@ -28,6 +28,7 @@ class _MenuItemState extends State<MenuItem> {
 
   @override
   Widget build(BuildContext context) {
+  //print(widget.isActive);
     return AnimatedContainer(
       duration: const Duration( milliseconds: 250 ),
       /* color: isHovered
@@ -74,7 +75,7 @@ class _MenuItemState extends State<MenuItem> {
                         ? Colors.blueGrey
                         : widget.isActive ? Colors.blueGrey : Colors.blueGrey[200],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
