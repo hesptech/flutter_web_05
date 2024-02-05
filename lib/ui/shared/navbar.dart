@@ -25,7 +25,7 @@ class Navbar extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       width: double.infinity,    
       height: size.width < 900 ? 80.0 : 100.0,
-      decoration: buildBoxDecoration(),
+      //decoration: buildBoxDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

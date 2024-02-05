@@ -12,10 +12,11 @@ class HomeView extends StatelessWidget {
           fit: BoxFit.contain,
           child: Text(
             'Home',
-            style: GoogleFonts.montserratAlternates(
+            style: Theme.of(context).textTheme.titleLarge,
+            /* style: GoogleFonts.montserratAlternates(
               fontSize: 80,
               fontWeight: FontWeight.bold
-            ),
+            ), */
           ),
         ),
       ),

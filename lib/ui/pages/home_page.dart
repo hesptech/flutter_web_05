@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        decoration: buildBoxDecoration(),
+        //decoration: buildBoxDecoration(),
         child: Stack(
           children: [
 

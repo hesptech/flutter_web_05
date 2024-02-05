@@ -8,7 +8,7 @@ final ThemeData theme = ThemeData(
   fontFamily: GoogleFonts.montserratAlternates().fontFamily,
 
   textTheme: TextTheme(
-    /* titleLarge: GoogleFonts.montserratAlternates(
+    titleLarge: GoogleFonts.montserratAlternates(
       fontSize: 80,
       fontWeight: FontWeight.w600,
       color: Colors.blueGrey[200],
@@ -23,7 +23,7 @@ final ThemeData theme = ThemeData(
       fontSize: 14,
       fontWeight: FontWeight.w600,
       color: Colors.blueGrey[200],
-    ), */
+    ),
 
 
     /* displayLarge: GoogleFonts.montserratAlternates(
